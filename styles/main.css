@@ -7,6 +7,7 @@ body {
 header {
   background-color: #3761B0;
   width: 100%;
+  box-shadow: 0 0 14px #000;
 }
 header .header-image-container {
   display: flex;
@@ -15,17 +16,63 @@ header .header-image-container {
   padding: 16px 0;
 }
 header .header-image-container span {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   display: flex;
-  padding: 6px 0;
+  padding: 4px;
   border-radius: 50%;
-  border: 1px solid #fff;
+  background-clip: padding-box;
+  border: 1.5px solid #fff;
+  box-shadow: 0 0 2px #fff, 0 0 10px #AFCAE3;
 }
 header .header-image-container span .header-cristian-photo {
-  width: 90px;
+  width: 80px;
+  height: 80px;
   transform: scaleX(-1);
-  -webkit-clip-path: circle();
-          clip-path: circle();
+  border-radius: 50%;
 }
-header .header-image-container .header-logo {
+header .header-image-container .header-doctor-name {
+  width: 180px;
   align-self: center;
+}
+header .header-divider {
+  display: block;
+  content: " ";
+  width: 60%;
+  height: 1px;
+  margin: 10px auto;
+  background-color: #fff;
+  position: relative;
+}
+header .header-divider::before {
+  display: block;
+  content: " ";
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  align-self: center;
+  transform: rotate(45deg);
+  position: absolute;
+  top: -2px;
+}
+header .header-divider::after {
+  display: block;
+  content: " ";
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  align-self: center;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 0;
+  top: -2px;
+}
+header p {
+  text-align: center;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  padding: 5px 16px 20px;
 }/*# sourceMappingURL=main.css.map */
