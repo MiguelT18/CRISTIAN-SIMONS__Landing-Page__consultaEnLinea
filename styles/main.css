@@ -1,0 +1,31 @@
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-color: #3761B0;
+  width: 100%;
+}
+header .header-image-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 0;
+}
+header .header-image-container span {
+  display: flex;
+  padding: 6px 0;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+header .header-image-container span .header-cristian-photo {
+  width: 90px;
+  transform: scaleX(-1);
+  -webkit-clip-path: circle();
+          clip-path: circle();
+}
+header .header-image-container .header-logo {
+  align-self: center;
+}/*# sourceMappingURL=main.css.map */
