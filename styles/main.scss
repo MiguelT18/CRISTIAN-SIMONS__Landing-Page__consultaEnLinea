@@ -15,9 +15,9 @@ $font-montserrat: 'Montserrat', sans-serif;
 $font-timberline: timberline, sans-serif;
 
 // Tamaño de fuentes
-$font-size-small: 14px;
-$font-size-medium: 16px;
-$font-size-large: 20px;
+$font-size-small: 18px;
+$font-size-medium: 22px;
+$font-size-large: 26px;
 
 //!==============================
 
@@ -35,12 +35,52 @@ $font-size-large: 20px;
     position: absolute;
 }
 
+// Card Repeated Styles
+@mixin cardContent {
+    padding: 20px;
+    max-width: 450px;
+    border-radius: 8px;
+}
+@mixin cardTitle {
+    color: #fff;
+    text-transform: uppercase;
+    font-family: $font-montserrat;
+    font-size: $font-size-medium;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+@mixin cardDescription {
+    color: #fff;
+    font-size: $font-size-small;
+    font-family: $font-open-sans;
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+@mixin cardButton {
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    color: #000;
+    background-color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: $font-size-small;
+    font-family: $font-montserrat;
+    cursor: pointer;
+}
+
 //!==============================
 
 //? Reseteo de los estilos por defecto de los navegadores
 body {
     box-sizing: border-box;
     padding: 0;
+    margin: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+p {
     margin: 0;
 }
 
@@ -121,8 +161,72 @@ main {
         }
     }
     .main-description {
-        font-family: $font-open-sans;
-        font-weight: 500;
         text-align: center;
+        font: {
+            family: $font-open-sans;
+            size: $font-size-small;
+            weight: 500;    
+        }
+    }
+
+    // CARD STYLES:
+    .cards-container {
+        margin-top: 30px;
+        border: solid 2px red;
+        display: grid;
+        justify-content: center;
+        gap: 15px;
+        .card-item1 {
+            background-image: linear-gradient(to bottom, #3761B0, #296EEF);
+            @include cardContent();
+                .card1-title {
+                    @include cardTitle();
+                }
+                .card1-description {
+                    @include cardDescription();
+                }
+                .card1-button {
+                    @include cardButton();
+                }
+        }
+        .card-item2 {
+            background-image: linear-gradient(to bottom, #A80606, #6B0000);
+            @include cardContent();
+            .card2-title {
+                @include cardTitle();
+            }
+            .card2-description {
+                @include cardDescription();
+            }
+            .card2-button {
+                @include cardButton();
+            }
+        }
+        .card-item3 {
+            background-image: linear-gradient(to bottom, #007c30c2, #05972a);
+            @include cardContent();
+            .card3-title {
+                @include cardTitle();
+            }
+            .card3-description {
+                @include cardDescription();
+            }
+            .card3-button {
+                @include cardButton();
+            }
+        }
+        .card-item4 {
+            background-image: linear-gradient(to bottom, #026164c2, #15a7ac);
+            @include cardContent();
+            .card4-title {
+                @include cardTitle();
+            }
+            .card4-description {
+                @include cardDescription();
+            }
+            .card4-button {
+                @include cardButton();
+            }
+        }
     }
 }
