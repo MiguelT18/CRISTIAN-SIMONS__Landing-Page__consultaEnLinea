@@ -1,3 +1,7 @@
+##? custom routes
+.vscode
+.vscode-root
+
 # Logs
 logs
 *.log
