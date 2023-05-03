@@ -3,21 +3,21 @@
 //! Variables
 
 // Paleta de Colores
-$dark-blue: #3761B0;
-$light-blue: #6EA7D6;
-$cream-blue: #AFCAE3;
-$cream-white: #E9F4FC;
-$dark-grey: #3E3E3E;
+$dark-blue: #3761b0;
+$light-blue: #6ea7d6;
+$cream-blue: #afcae3;
+$cream-white: #e9f4fc;
+$dark-grey: #3e3e3e;
 
 // Fuentes
-$font-open-sans: 'Open Sans', sans-serif;
-$font-montserrat: 'Montserrat', sans-serif;
+$font-open-sans: "Open Sans", sans-serif;
+$font-montserrat: "Montserrat", sans-serif;
 $font-timberline: timberline, sans-serif;
 
 // Tamaño de fuentes
-$font-size-small: 18px;
-$font-size-medium: 22px;
-$font-size-large: 26px;
+$font-size-small: clamp(18px, 5vw, 20px);
+$font-size-medium: clamp(20px, 5vw, 24px);
+$font-size-large: clamp(24px, 5vw, 26px);
 
 //!==============================
 
@@ -38,8 +38,10 @@ $font-size-large: 26px;
 // Card Repeated Styles
 @mixin cardContent {
     padding: 20px;
-    max-width: 450px;
     border-radius: 8px;
+}
+@mixin cardShadow {
+    box-shadow: 4px 4px 10px #000;
 }
 @mixin cardTitle {
     color: #fff;
@@ -57,6 +59,7 @@ $font-size-large: 26px;
     margin-bottom: 10px;
 }
 @mixin cardButton {
+    width: 200px;
     border: none;
     border-radius: 8px;
     padding: 10px 20px;
@@ -77,14 +80,21 @@ body {
     padding: 0;
     margin: 0;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin: 0;
 }
 p {
     margin: 0;
 }
 
+//? ===================
 //? Header Styles
+//? ===================
 header {
     background-color: $dark-blue;
     width: 100%;
@@ -119,6 +129,7 @@ header {
         display: block;
         content: " ";
         width: 60%;
+        max-width: 335px;
         height: 1px;
         margin: 10px auto;
         background-color: #fff;
@@ -134,30 +145,35 @@ header {
         top: -2px;
     }
     .header-welcome {
+        max-width: 640px;
+        margin: 0 auto;
         text-align: center;
         color: #fff;
         padding: 5px 16px 20px;
         font: {
             family: $font-open-sans;
-            size: $font-size-small;    
+            size: $font-size-small;
         }
     }
 }
 
+//? ===================
 //? Main Styles
+//? ===================
 main {
     padding: 0 16px;
     .main-title {
         color: $dark-blue;
         letter-spacing: 2px;
         margin-top: 30px;
+        margin-bottom: 10px;
         font: {
             family: $font-montserrat;
-            size: $font-size-large;
+            size: $font-size-medium;
         }
         text: {
             transform: uppercase;
-            align: center;    
+            align: center;
         }
     }
     .main-description {
@@ -165,33 +181,46 @@ main {
         font: {
             family: $font-open-sans;
             size: $font-size-small;
-            weight: 500;    
+            weight: 500;
         }
     }
 
     // CARD STYLES:
     .cards-container {
-        margin-top: 30px;
-        border: solid 2px red;
+        max-width: 500px;
+        margin: 30px auto 0;
         display: grid;
-        justify-content: center;
-        gap: 15px;
+        gap: 50px;
         .card-item1 {
-            background-image: linear-gradient(to bottom, #3761B0, #296EEF);
+            display: flex;
+            position: relative;
+            background-image: linear-gradient(to bottom, #296eef, #3761b0);
+            @include cardShadow();
             @include cardContent();
-                .card1-title {
-                    @include cardTitle();
-                }
-                .card1-description {
-                    @include cardDescription();
-                }
-                .card1-button {
-                    @include cardButton();
-                }
+
+            .card-content1 {
+                max-width: 300px;
+            }
+            .card1-title {
+                @include cardTitle();
+            }
+            .card1-description {
+                @include cardDescription();
+            }
+            .card1-button {
+                @include cardButton();
+            }
         }
         .card-item2 {
-            background-image: linear-gradient(to bottom, #A80606, #6B0000);
+            position: relative;
+            display: flex;
+            background-image: linear-gradient(to bottom, #a80606, #6b0000);
+            @include cardShadow();
             @include cardContent();
+
+            .card-content2 {
+                max-width: 280px;
+            }
             .card2-title {
                 @include cardTitle();
             }
@@ -203,8 +232,21 @@ main {
             }
         }
         .card-item3 {
-            background-image: linear-gradient(to bottom, #007c30c2, #05972a);
+            position: relative;
+            display: flex;
+            background-image: linear-gradient(
+                to bottom left,
+                #00f7ef,
+                #000000,
+                #050002,
+                #ff004f
+            );
+            @include cardShadow();
             @include cardContent();
+
+            .card-content3 {
+                max-width: 260px;
+            }
             .card3-title {
                 @include cardTitle();
             }
@@ -216,8 +258,20 @@ main {
             }
         }
         .card-item4 {
-            background-image: linear-gradient(to bottom, #026164c2, #15a7ac);
+            position: relative;
+            display: flex;
+            background-image: linear-gradient(
+                to bottom,
+                #711cbe,
+                #c42b66,
+                #e19449
+            );
+            @include cardShadow();
             @include cardContent();
+
+            .card-content4 {
+                max-width: 240px;
+            }
             .card4-title {
                 @include cardTitle();
             }
@@ -226,6 +280,133 @@ main {
             }
             .card4-button {
                 @include cardButton();
+            }
+        }
+        .card-item5 {
+            position: relative;
+            display: flex;
+            background-image: linear-gradient(to bottom, #00affe, #006bf0);
+            @include cardShadow();
+            @include cardContent();
+
+            .card-content5 {
+                max-width: 260px;
+            }
+            .card5-title {
+                @include cardTitle();
+            }
+            .card5-description {
+                @include cardDescription();
+            }
+            .card5-button {
+                @include cardButton();
+            }
+        }
+    }
+}
+
+//? ===================
+//? Footer Styles
+//? ===================
+footer {
+    background-color: $dark-blue;
+    margin-top: 60px;
+    padding-bottom: 20px;
+    .footer-images-container {
+        display: flex;
+        justify-content: center;
+        .footer-img1 {
+            width: 120px;
+        }
+        .footer-img2 {
+            width: 120px;
+        }
+    }
+    p {
+        font-size: $font-size-small;
+        font-weight: 400;
+        font-family: $font-open-sans;
+        color: #fff;
+        text-align: center;
+        margin-top: -20px;
+    }
+}
+
+//? =================================
+//? MEDIA QUERIES - Responsive design
+//? =================================
+
+@media screen and (min-width: 460px) {
+    .cards-container {
+        margin-top: 80px !important;
+        gap: 80px !important;
+        .card-item1 {
+            .card-img1 {
+                display: block !important;
+                width: 170px;
+                position: absolute;
+                right: 0px;
+                top: -100px;
+            }
+        }
+        .card-item2 {
+            flex-direction: row-reverse;
+            .card-img2 {
+                display: block !important;
+                width: 215px;
+                position: absolute;
+                left: 0;
+                top: -140px;
+            }
+            .card-content2 {
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+                .card2-title {
+                    text-align: right;
+                }
+                .card2-description {
+                    text-align: right;
+                }
+            }
+        }
+        .card-item3 {
+            .card-img3 {
+                display: block !important;
+                width: 185px;
+                position: absolute;
+                right: 0px;
+                top: -95px;
+            }
+        }
+        .card-item4 {
+            flex-direction: row-reverse;
+            .card-img4 {
+                display: block !important;
+                width: 190px;
+                position: absolute;
+                left: 0;
+                top: -76px;
+            }
+            .card-content4 {
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+                .card4-title {
+                    text-align: right;
+                }
+                .card4-description {
+                    text-align: right;
+                }
+            }
+        }
+        .card-item5 {
+            .card-img5 {
+                display: block !important;
+                width: 185px;
+                position: absolute;
+                right: 0px;
+                top: -95px;
             }
         }
     }

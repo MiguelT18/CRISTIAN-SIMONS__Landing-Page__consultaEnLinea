@@ -4,7 +4,12 @@ body {
   margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 
@@ -13,7 +18,7 @@ p {
 }
 
 header {
-  background-color: #3761B0;
+  background-color: #3761b0;
   width: 100%;
   box-shadow: 0 0 14px #000;
 }
@@ -31,7 +36,7 @@ header .header-image-container .cristian-photo-wrapper {
   display: flex;
   padding: 4px;
   background-clip: padding-box;
-  box-shadow: 0 0 2px #fff, 0 0 10px #AFCAE3;
+  box-shadow: 0 0 2px #fff, 0 0 10px #afcae3;
   border-radius: 50%;
   border: 1.5px solid #fff;
 }
@@ -49,6 +54,7 @@ header .header-divider {
   display: block;
   content: " ";
   width: 60%;
+  max-width: 335px;
   height: 1px;
   margin: 10px auto;
   background-color: #fff;
@@ -78,60 +84,68 @@ header .header-divider::after {
   top: -2px;
 }
 header .header-welcome {
+  max-width: 640px;
+  margin: 0 auto;
   text-align: center;
   color: #fff;
   padding: 5px 16px 20px;
   font-family: "Open Sans", sans-serif;
-  font-size: 18px;
+  font-size: clamp(18px, 5vw, 20px);
 }
 
 main {
   padding: 0 16px;
 }
 main .main-title {
-  color: #3761B0;
+  color: #3761b0;
   letter-spacing: 2px;
   margin-top: 30px;
+  margin-bottom: 10px;
   font-family: "Montserrat", sans-serif;
-  font-size: 26px;
+  font-size: clamp(20px, 5vw, 24px);
   text-transform: uppercase;
   text-align: center;
 }
 main .main-description {
   text-align: center;
   font-family: "Open Sans", sans-serif;
-  font-size: 18px;
+  font-size: clamp(18px, 5vw, 20px);
   font-weight: 500;
 }
 main .cards-container {
-  margin-top: 30px;
-  border: solid 2px red;
+  max-width: 500px;
+  margin: 30px auto 0;
   display: grid;
-  justify-content: center;
-  gap: 15px;
+  gap: 50px;
 }
 main .cards-container .card-item1 {
-  background-image: linear-gradient(to bottom, #3761B0, #296EEF);
+  display: flex;
+  position: relative;
+  background-image: linear-gradient(to bottom, #296eef, #3761b0);
+  box-shadow: 4px 4px 10px #000;
   padding: 20px;
-  max-width: 450px;
   border-radius: 8px;
+}
+main .cards-container .card-item1 .card-content1 {
+  max-width: 300px;
 }
 main .cards-container .card-item1 .card1-title {
   color: #fff;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
-  font-size: 22px;
+  font-size: clamp(20px, 5vw, 24px);
   font-weight: bold;
   margin-bottom: 5px;
 }
 main .cards-container .card-item1 .card1-description {
   color: #fff;
-  font-size: 18px;
+  font-size: clamp(18px, 5vw, 20px);
   font-family: "Open Sans", sans-serif;
   font-weight: 100;
   margin-bottom: 10px;
 }
 main .cards-container .card-item1 .card1-button {
+  width: 200px;
   border: none;
   border-radius: 8px;
   padding: 10px 20px;
@@ -139,32 +153,38 @@ main .cards-container .card-item1 .card1-button {
   background-color: #fff;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: clamp(18px, 5vw, 20px);
   font-family: "Montserrat", sans-serif;
   cursor: pointer;
 }
 main .cards-container .card-item2 {
-  background-image: linear-gradient(to bottom, #A80606, #6B0000);
+  position: relative;
+  display: flex;
+  background-image: linear-gradient(to bottom, #a80606, #6b0000);
+  box-shadow: 4px 4px 10px #000;
   padding: 20px;
-  max-width: 450px;
   border-radius: 8px;
+}
+main .cards-container .card-item2 .card-content2 {
+  max-width: 280px;
 }
 main .cards-container .card-item2 .card2-title {
   color: #fff;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
-  font-size: 22px;
+  font-size: clamp(20px, 5vw, 24px);
   font-weight: bold;
   margin-bottom: 5px;
 }
 main .cards-container .card-item2 .card2-description {
   color: #fff;
-  font-size: 18px;
+  font-size: clamp(18px, 5vw, 20px);
   font-family: "Open Sans", sans-serif;
   font-weight: 100;
   margin-bottom: 10px;
 }
 main .cards-container .card-item2 .card2-button {
+  width: 200px;
   border: none;
   border-radius: 8px;
   padding: 10px 20px;
@@ -172,32 +192,38 @@ main .cards-container .card-item2 .card2-button {
   background-color: #fff;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: clamp(18px, 5vw, 20px);
   font-family: "Montserrat", sans-serif;
   cursor: pointer;
 }
 main .cards-container .card-item3 {
-  background-image: linear-gradient(to bottom, rgba(0, 124, 48, 0.7607843137), #05972a);
+  position: relative;
+  display: flex;
+  background-image: linear-gradient(to bottom left, #00f7ef, #000000, #050002, #ff004f);
+  box-shadow: 4px 4px 10px #000;
   padding: 20px;
-  max-width: 450px;
   border-radius: 8px;
+}
+main .cards-container .card-item3 .card-content3 {
+  max-width: 260px;
 }
 main .cards-container .card-item3 .card3-title {
   color: #fff;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
-  font-size: 22px;
+  font-size: clamp(20px, 5vw, 24px);
   font-weight: bold;
   margin-bottom: 5px;
 }
 main .cards-container .card-item3 .card3-description {
   color: #fff;
-  font-size: 18px;
+  font-size: clamp(18px, 5vw, 20px);
   font-family: "Open Sans", sans-serif;
   font-weight: 100;
   margin-bottom: 10px;
 }
 main .cards-container .card-item3 .card3-button {
+  width: 200px;
   border: none;
   border-radius: 8px;
   padding: 10px 20px;
@@ -205,32 +231,38 @@ main .cards-container .card-item3 .card3-button {
   background-color: #fff;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: clamp(18px, 5vw, 20px);
   font-family: "Montserrat", sans-serif;
   cursor: pointer;
 }
 main .cards-container .card-item4 {
-  background-image: linear-gradient(to bottom, rgba(2, 97, 100, 0.7607843137), #15a7ac);
+  position: relative;
+  display: flex;
+  background-image: linear-gradient(to bottom, #711cbe, #c42b66, #e19449);
+  box-shadow: 4px 4px 10px #000;
   padding: 20px;
-  max-width: 450px;
   border-radius: 8px;
+}
+main .cards-container .card-item4 .card-content4 {
+  max-width: 240px;
 }
 main .cards-container .card-item4 .card4-title {
   color: #fff;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
-  font-size: 22px;
+  font-size: clamp(20px, 5vw, 24px);
   font-weight: bold;
   margin-bottom: 5px;
 }
 main .cards-container .card-item4 .card4-description {
   color: #fff;
-  font-size: 18px;
+  font-size: clamp(18px, 5vw, 20px);
   font-family: "Open Sans", sans-serif;
   font-weight: 100;
   margin-bottom: 10px;
 }
 main .cards-container .card-item4 .card4-button {
+  width: 200px;
   border: none;
   border-radius: 8px;
   padding: 10px 20px;
@@ -238,7 +270,140 @@ main .cards-container .card-item4 .card4-button {
   background-color: #fff;
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: clamp(18px, 5vw, 20px);
   font-family: "Montserrat", sans-serif;
   cursor: pointer;
+}
+main .cards-container .card-item5 {
+  position: relative;
+  display: flex;
+  background-image: linear-gradient(to bottom, #00affe, #006bf0);
+  box-shadow: 4px 4px 10px #000;
+  padding: 20px;
+  border-radius: 8px;
+}
+main .cards-container .card-item5 .card-content5 {
+  max-width: 260px;
+}
+main .cards-container .card-item5 .card5-title {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(20px, 5vw, 24px);
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+main .cards-container .card-item5 .card5-description {
+  color: #fff;
+  font-size: clamp(18px, 5vw, 20px);
+  font-family: "Open Sans", sans-serif;
+  font-weight: 100;
+  margin-bottom: 10px;
+}
+main .cards-container .card-item5 .card5-button {
+  width: 200px;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  color: #000;
+  background-color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: clamp(18px, 5vw, 20px);
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #3761b0;
+  margin-top: 60px;
+  padding-bottom: 20px;
+}
+footer .footer-images-container {
+  display: flex;
+  justify-content: center;
+}
+footer .footer-images-container .footer-img1 {
+  width: 120px;
+}
+footer .footer-images-container .footer-img2 {
+  width: 120px;
+}
+footer p {
+  font-size: clamp(18px, 5vw, 20px);
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  text-align: center;
+  margin-top: -20px;
+}
+
+@media screen and (min-width: 460px) {
+  .cards-container {
+    margin-top: 80px !important;
+    gap: 80px !important;
+  }
+  .cards-container .card-item1 .card-img1 {
+    display: block !important;
+    width: 170px;
+    position: absolute;
+    right: 0px;
+    top: -100px;
+  }
+  .cards-container .card-item2 {
+    flex-direction: row-reverse;
+  }
+  .cards-container .card-item2 .card-img2 {
+    display: block !important;
+    width: 215px;
+    position: absolute;
+    left: 0;
+    top: -140px;
+  }
+  .cards-container .card-item2 .card-content2 {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+  .cards-container .card-item2 .card-content2 .card2-title {
+    text-align: right;
+  }
+  .cards-container .card-item2 .card-content2 .card2-description {
+    text-align: right;
+  }
+  .cards-container .card-item3 .card-img3 {
+    display: block !important;
+    width: 185px;
+    position: absolute;
+    right: 0px;
+    top: -95px;
+  }
+  .cards-container .card-item4 {
+    flex-direction: row-reverse;
+  }
+  .cards-container .card-item4 .card-img4 {
+    display: block !important;
+    width: 190px;
+    position: absolute;
+    left: 0;
+    top: -76px;
+  }
+  .cards-container .card-item4 .card-content4 {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+  .cards-container .card-item4 .card-content4 .card4-title {
+    text-align: right;
+  }
+  .cards-container .card-item4 .card-content4 .card4-description {
+    text-align: right;
+  }
+  .cards-container .card-item5 .card-img5 {
+    display: block !important;
+    width: 185px;
+    position: absolute;
+    right: 0px;
+    top: -95px;
+  }
 }/*# sourceMappingURL=main.css.map */
