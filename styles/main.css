@@ -17,6 +17,11 @@ p {
   margin: 0;
 }
 
+a {
+  color: #000;
+  text-decoration: none;
+}
+
 header {
   background-color: #3761b0;
   width: 100%;
@@ -113,7 +118,7 @@ main .main-description {
   font-weight: 500;
 }
 main .cards-container {
-  max-width: 500px;
+  max-width: 450px;
   margin: 30px auto 0;
   display: grid;
   gap: 50px;
@@ -157,6 +162,12 @@ main .cards-container .card-item1 .card1-button {
   font-family: "Montserrat", sans-serif;
   cursor: pointer;
 }
+main .cards-container .card-item1 .card1-button:hover {
+  background-color: #f1f1f1;
+}
+main .cards-container .card-item1 .card1-button:active {
+  transform: scale(0.9);
+}
 main .cards-container .card-item2 {
   position: relative;
   display: flex;
@@ -195,6 +206,12 @@ main .cards-container .card-item2 .card2-button {
   font-size: clamp(18px, 5vw, 20px);
   font-family: "Montserrat", sans-serif;
   cursor: pointer;
+}
+main .cards-container .card-item2 .card2-button:hover {
+  background-color: #f1f1f1;
+}
+main .cards-container .card-item2 .card2-button:active {
+  transform: scale(0.9);
 }
 main .cards-container .card-item3 {
   position: relative;
@@ -235,6 +252,12 @@ main .cards-container .card-item3 .card3-button {
   font-family: "Montserrat", sans-serif;
   cursor: pointer;
 }
+main .cards-container .card-item3 .card3-button:hover {
+  background-color: #f1f1f1;
+}
+main .cards-container .card-item3 .card3-button:active {
+  transform: scale(0.9);
+}
 main .cards-container .card-item4 {
   position: relative;
   display: flex;
@@ -273,6 +296,12 @@ main .cards-container .card-item4 .card4-button {
   font-size: clamp(18px, 5vw, 20px);
   font-family: "Montserrat", sans-serif;
   cursor: pointer;
+}
+main .cards-container .card-item4 .card4-button:hover {
+  background-color: #f1f1f1;
+}
+main .cards-container .card-item4 .card4-button:active {
+  transform: scale(0.9);
 }
 main .cards-container .card-item5 {
   position: relative;
@@ -313,6 +342,12 @@ main .cards-container .card-item5 .card5-button {
   font-family: "Montserrat", sans-serif;
   cursor: pointer;
 }
+main .cards-container .card-item5 .card5-button:hover {
+  background-color: #f1f1f1;
+}
+main .cards-container .card-item5 .card5-button:active {
+  transform: scale(0.9);
+}
 
 footer {
   background-color: #3761b0;
@@ -338,7 +373,7 @@ footer p {
   margin-top: -20px;
 }
 
-@media screen and (min-width: 460px) {
+@media screen and (min-width: 440px) {
   .cards-container {
     margin-top: 80px !important;
     gap: 80px !important;
@@ -353,13 +388,6 @@ footer p {
   .cards-container .card-item2 {
     flex-direction: row-reverse;
   }
-  .cards-container .card-item2 .card-img2 {
-    display: block !important;
-    width: 215px;
-    position: absolute;
-    left: 0;
-    top: -140px;
-  }
   .cards-container .card-item2 .card-content2 {
     display: flex;
     flex-direction: column;
@@ -371,6 +399,13 @@ footer p {
   .cards-container .card-item2 .card-content2 .card2-description {
     text-align: right;
   }
+  .cards-container .card-item2 .card-img2 {
+    display: block !important;
+    width: 215px;
+    position: absolute;
+    left: 0;
+    top: -140px;
+  }
   .cards-container .card-item3 .card-img3 {
     display: block !important;
     width: 185px;
@@ -380,13 +415,6 @@ footer p {
   }
   .cards-container .card-item4 {
     flex-direction: row-reverse;
-  }
-  .cards-container .card-item4 .card-img4 {
-    display: block !important;
-    width: 190px;
-    position: absolute;
-    left: 0;
-    top: -76px;
   }
   .cards-container .card-item4 .card-content4 {
     display: flex;
@@ -399,11 +427,55 @@ footer p {
   .cards-container .card-item4 .card-content4 .card4-description {
     text-align: right;
   }
+  .cards-container .card-item4 .card-img4 {
+    display: block !important;
+    width: 190px;
+    position: absolute;
+    left: 0;
+    top: -76px;
+  }
   .cards-container .card-item5 .card-img5 {
     display: block !important;
     width: 185px;
     position: absolute;
     right: 0px;
     top: -95px;
+  }
+}
+@media screen and (min-width: 1080px) {
+  main .main-header {
+    padding-bottom: 10px;
+  }
+  main .cards-container {
+    max-width: 1000px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  main .cards-container .card-item1 .card-content1 .card1-button {
+    margin-top: 30px;
+  }
+  main .cards-container .card-item1 .card-img1 {
+    width: 190px;
+    top: -103px;
+  }
+  main .cards-container .card-item2 .card-img2 {
+    width: 220px;
+    top: -148px;
+  }
+  main .cards-container .card-item3 .card-content3 .card3-button {
+    margin-top: 30px;
+  }
+  main .cards-container .card-item3 .card-img3 {
+    width: 210px;
+    top: -106px;
+    right: -30px;
+  }
+  main .cards-container .card-item4 .card-img4 {
+    width: 200px;
+    top: -88px;
+  }
+  main .cards-container .card-item5 {
+    width: 450px;
+    margin: 10px auto 0;
+    grid-column: span 2;
   }
 }/*# sourceMappingURL=main.css.map */
