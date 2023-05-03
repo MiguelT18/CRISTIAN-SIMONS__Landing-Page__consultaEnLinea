@@ -1,6 +1,6 @@
 ##? custom routes
-.vscode
-.vscode-root
+.vscode/
+.vscode-root/
 
 # Logs
 logs
