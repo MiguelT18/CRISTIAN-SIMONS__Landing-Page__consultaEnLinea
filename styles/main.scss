@@ -59,7 +59,6 @@ $font-size-large: clamp(24px, 5vw, 26px);
     margin-bottom: 10px;
 }
 @mixin cardButton {
-    width: 200px;
     border: none;
     border-radius: 8px;
     padding: 10px 20px;
@@ -209,38 +208,44 @@ main {
             @include cardContent();
 
             .card-content1 {
-                max-width: 300px;
-            }
-            .card1-title {
-                @include cardTitle();
-            }
-            .card1-description {
-                @include cardDescription();
-            }
-            .card1-button {
-                @include cardButton();
-            }
-            .card1-button:hover {
-                @include cardButtonHover();
-            }
-            .card1-button:active {
-                @include cardButtonActive();
+                max-width: 200px;
+                .card1-title {
+                    @include cardTitle();
+                }
+                .card1-description {
+                    @include cardDescription();
+                }
+                .card1-button {
+                    @include cardButton();
+                }
+                .card1-button:hover {
+                    @include cardButtonHover();
+                }
+                .card1-button:active {
+                    @include cardButtonActive();
+                }
             }
         }
         .card-item2 {
             position: relative;
             display: flex;
+            justify-content: end;
             background-image: linear-gradient(to bottom, #a80606, #6b0000);
             @include cardShadow();
             @include cardContent();
 
             .card-content2 {
-                max-width: 280px;
+                max-width: 210px;
+                display: flex;
+                flex-direction: column;
+                align-items: end;
             }
             .card2-title {
+                text-align: end;
                 @include cardTitle();
             }
             .card2-description {
+                text-align: end;
                 @include cardDescription();
             }
             .card2-button {
@@ -267,7 +272,7 @@ main {
             @include cardContent();
 
             .card-content3 {
-                max-width: 260px;
+                max-width: 200px;
             }
             .card3-title {
                 @include cardTitle();
@@ -288,6 +293,7 @@ main {
         .card-item4 {
             position: relative;
             display: flex;
+            justify-content: end;
             background-image: linear-gradient(
                 to bottom,
                 #711cbe,
@@ -298,12 +304,17 @@ main {
             @include cardContent();
 
             .card-content4 {
-                max-width: 240px;
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+                max-width: 180px;
             }
             .card4-title {
+                text-align: end;
                 @include cardTitle();
             }
             .card4-description {
+                text-align: end;
                 @include cardDescription();
             }
             .card4-button {
@@ -324,7 +335,7 @@ main {
             @include cardContent();
 
             .card-content5 {
-                max-width: 260px;
+                max-width: 200px;
             }
             .card5-title {
                 @include cardTitle();
@@ -376,132 +387,130 @@ footer {
 //? MEDIA QUERIES - Responsive design
 //? =================================
 
-@media screen and (min-width: 440px) {
-    .cards-container {
-        margin-top: 80px !important;
-        gap: 80px !important;
-        .card-item1 {
-            .card-img1 {
-                display: block !important;
-                width: 170px;
-                position: absolute;
-                right: 0px;
-                top: -100px;
-            }
-        }
-        .card-item2 {
-            flex-direction: row-reverse;
-            .card-content2 {
-                display: flex;
-                flex-direction: column;
-                align-items: end;
-                .card2-title {
-                    text-align: right;
-                }
-                .card2-description {
-                    text-align: right;
-                }
-            }
-            .card-img2 {
-                display: block !important;
-                width: 215px;
-                position: absolute;
-                left: 0;
-                top: -140px;
-            }
-        }
-        .card-item3 {
-            .card-content3 {
-            }
-            .card-img3 {
-                display: block !important;
-                width: 185px;
-                position: absolute;
-                right: 0px;
-                top: -95px;
-            }
-        }
-        .card-item4 {
-            flex-direction: row-reverse;
-            .card-content4 {
-                display: flex;
-                flex-direction: column;
-                align-items: end;
-                .card4-title {
-                    text-align: right;
-                }
-                .card4-description {
-                    text-align: right;
-                }
-            }
-            .card-img4 {
-                display: block !important;
-                width: 190px;
-                position: absolute;
-                left: 0;
-                top: -76px;
-            }
-        }
-        .card-item5 {
-            .card-img5 {
-                display: block !important;
-                width: 185px;
-                position: absolute;
-                right: 0px;
-                top: -95px;
-            }
-        }
-    }
-}
+// @media screen and (min-width: 440px) {
+//     .cards-container {
+//         margin-top: 80px !important;
+//         gap: 80px !important;
+//         .card-item1 {
+//             .card-img1 {
+//                 display: block !important;
+//                 width: 170px;
+//                 position: absolute;
+//                 right: 0px;
+//                 top: -100px;
+//             }
+//         }
+//         .card-item2 {
+//             flex-direction: row-reverse;
+//             .card-content2 {
+//                 display: flex;
+//                 flex-direction: column;
+//                 .card2-title {
+//                     text-align: right;
+//                 }
+//                 .card2-description {
+//                     text-align: right;
+//                 }
+//             }
+//             .card-img2 {
+//                 display: block !important;
+//                 width: 215px;
+//                 position: absolute;
+//                 left: 0;
+//                 top: -140px;
+//             }
+//         }
+//         .card-item3 {
+//             .card-content3 {
+//             }
+//             .card-img3 {
+//                 display: block !important;
+//                 width: 185px;
+//                 position: absolute;
+//                 right: 0px;
+//                 top: -95px;
+//             }
+//         }
+//         .card-item4 {
+//             flex-direction: row-reverse;
+//             .card-content4 {
+//                 display: flex;
+//                 flex-direction: column;
+//                 .card4-title {
+//                     text-align: right;
+//                 }
+//                 .card4-description {
+//                     text-align: right;
+//                 }
+//             }
+//             .card-img4 {
+//                 display: block !important;
+//                 width: 190px;
+//                 position: absolute;
+//                 left: 0;
+//                 top: -76px;
+//             }
+//         }
+//         .card-item5 {
+//             .card-img5 {
+//                 display: block !important;
+//                 width: 185px;
+//                 position: absolute;
+//                 right: 0px;
+//                 top: -95px;
+//             }
+//         }
+//     }
+// }
 
-@media screen and (min-width: 1080px) {
-    main {
-        .main-header {
-            padding-bottom: 10px;
-        }
-        .cards-container {
-            max-width: 1000px;
-            grid-template-columns: repeat(2, 1fr);
-            .card-item1 {
-                .card-content1 {
-                    .card1-button {
-                        margin-top: 30px;
-                    }
-                }
-                .card-img1 {
-                    width: 190px;
-                    top: -103px;
-                }
-            }
-            .card-item2 {
-                .card-img2 {
-                    width: 220px;
-                    top: -148px;
-                }
-            }
-            .card-item3 {
-                .card-content3 {
-                    .card3-button {
-                        margin-top: 30px;
-                    }
-                }
-                .card-img3 {
-                    width: 210px;
-                    top: -106px;
-                    right: -30px;
-                }
-            }
-            .card-item4 {
-                .card-img4 {
-                    width: 200px;
-                    top: -88px;
-                }
-            }
-            .card-item5 {
-                width: 450px;
-                margin: 10px auto 0;
-                grid-column: span 2;
-            }
-        }
-    }
-}
+// @media screen and (min-width: 1080px) {
+//     main {
+//         .main-header {
+//             padding-bottom: 10px;
+//         }
+//         .cards-container {
+//             max-width: 1000px;
+//             grid-template-columns: repeat(2, 1fr);
+//             .card-item1 {
+//                 .card-content1 {
+//                     .card1-button {
+//                         margin-top: 30px;
+//                     }
+//                 }
+//                 .card-img1 {
+//                     width: 190px;
+//                     top: -103px;
+//                 }
+//             }
+//             .card-item2 {
+//                 .card-img2 {
+//                     width: 220px;
+//                     top: -148px;
+//                 }
+//             }
+//             .card-item3 {
+//                 .card-content3 {
+//                     .card3-button {
+//                         margin-top: 30px;
+//                     }
+//                 }
+//                 .card-img3 {
+//                     width: 210px;
+//                     top: -106px;
+//                     right: -30px;
+//                 }
+//             }
+//             .card-item4 {
+//                 .card-img4 {
+//                     width: 200px;
+//                     top: -88px;
+//                 }
+//             }
+//             .card-item5 {
+//                 width: 450px;
+//                 margin: 10px auto 0;
+//                 grid-column: span 2;
+//             }
+//         }
+//     }
+// }
