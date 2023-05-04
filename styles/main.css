@@ -373,16 +373,19 @@ footer p {
   margin-top: -20px;
 }
 
-@media screen and (min-width: 440px) {
+@media screen and (min-width: 330px) {
   .cards-container {
     margin-top: 80px !important;
     gap: 80px !important;
   }
+  .cards-container .card-item1 .card-content1 {
+    z-index: 1;
+  }
   .cards-container .card-item1 .card-img1 {
     display: block !important;
-    width: 170px;
+    width: 164px;
     position: absolute;
-    right: 0px;
+    right: -10px;
     top: -100px;
   }
   .cards-container .card-item2 {
@@ -392,6 +395,7 @@ footer p {
     display: flex;
     flex-direction: column;
     align-items: end;
+    z-index: 1;
   }
   .cards-container .card-item2 .card-content2 .card2-title {
     text-align: right;
@@ -401,16 +405,19 @@ footer p {
   }
   .cards-container .card-item2 .card-img2 {
     display: block !important;
-    width: 215px;
+    width: 191px;
     position: absolute;
     left: 0;
     top: -140px;
   }
+  .cards-container .card-item3 .card-content3 {
+    z-index: 1;
+  }
   .cards-container .card-item3 .card-img3 {
     display: block !important;
-    width: 185px;
+    width: 177px;
     position: absolute;
-    right: 0px;
+    right: -16px;
     top: -95px;
   }
   .cards-container .card-item4 {
@@ -420,6 +427,7 @@ footer p {
     display: flex;
     flex-direction: column;
     align-items: end;
+    z-index: 1;
   }
   .cards-container .card-item4 .card-content4 .card4-title {
     text-align: right;
@@ -429,17 +437,44 @@ footer p {
   }
   .cards-container .card-item4 .card-img4 {
     display: block !important;
-    width: 190px;
+    width: 160px;
     position: absolute;
-    left: 0;
-    top: -76px;
+    left: -7px;
+    top: -44px;
+  }
+  .cards-container .card-item5 .card-content5 {
+    z-index: 1;
   }
   .cards-container .card-item5 .card-img5 {
     display: block !important;
-    width: 185px;
+    width: 175px;
     position: absolute;
-    right: 0px;
-    top: -95px;
+    right: -16px;
+    top: -92px;
+  }
+}
+@media screen and (min-width: 400px) {
+  .card-img1 {
+    top: -91px !important;
+  }
+  .card-img2 {
+    width: 200px !important;
+    top: -118px !important;
+  }
+  .card-img3 {
+    top: -85px !important;
+  }
+  .card-img4 {
+    left: -5px !important;
+    top: -31px !important;
+  }
+  .card-img5 {
+    top: -85px !important;
+  }
+}
+@media screen and (min-width: 480px) {
+  .card-img5 {
+    top: -80px !important;
   }
 }
 @media screen and (min-width: 1080px) {
@@ -454,24 +489,24 @@ footer p {
     margin-top: 30px;
   }
   main .cards-container .card-item1 .card-img1 {
-    width: 190px;
-    top: -103px;
+    width: 190px !important;
+    top: -100px !important;
   }
   main .cards-container .card-item2 .card-img2 {
-    width: 220px;
-    top: -148px;
+    width: 220px !important;
+    top: -145px !important;
   }
   main .cards-container .card-item3 .card-content3 .card3-button {
     margin-top: 30px;
   }
   main .cards-container .card-item3 .card-img3 {
-    width: 210px;
-    top: -106px;
-    right: -30px;
+    width: 210px !important;
+    top: -103px !important;
+    right: -30px !important;
   }
   main .cards-container .card-item4 .card-img4 {
-    width: 200px;
-    top: -88px;
+    width: 200px !important;
+    top: -88px !important;
   }
   main .cards-container .card-item5 {
     width: 450px;
