@@ -123,10 +123,10 @@ main .main-header .main-description {
   font-weight: 500;
 }
 main .cards-container {
-  max-width: 450px;
+  max-width: 424px;
   margin: 50px auto 0;
   display: grid;
-  gap: 50px;
+  gap: 60px;
 }
 main .cards-container .card-item1 {
   max-width: 280px;
@@ -194,8 +194,9 @@ main .cards-container .card-item2 .card-content2 {
   display: flex;
   flex-direction: column;
   align-items: end;
+  z-index: 2;
 }
-main .cards-container .card-item2 .card2-title {
+main .cards-container .card-item2 .card-content2 .card2-title {
   text-align: end;
   color: #fff;
   text-transform: uppercase;
@@ -204,7 +205,7 @@ main .cards-container .card-item2 .card2-title {
   font-weight: bold;
   margin-bottom: 5px;
 }
-main .cards-container .card-item2 .card2-description {
+main .cards-container .card-item2 .card-content2 .card2-description {
   text-align: end;
   color: #fff;
   font-size: clamp(18px, 5vw, 20px);
@@ -212,7 +213,7 @@ main .cards-container .card-item2 .card2-description {
   font-weight: 100;
   margin-bottom: 10px;
 }
-main .cards-container .card-item2 .card2-button {
+main .cards-container .card-item2 .card-content2 .card2-button {
   border: none;
   border-radius: 8px;
   padding: 10px 20px;
@@ -224,11 +225,17 @@ main .cards-container .card-item2 .card2-button {
   font-family: "Montserrat", sans-serif;
   cursor: pointer;
 }
-main .cards-container .card-item2 .card2-button:hover {
+main .cards-container .card-item2 .card-content2 .card2-button:hover {
   background-color: #f1f1f1;
 }
-main .cards-container .card-item2 .card2-button:active {
+main .cards-container .card-item2 .card-content2 .card2-button:active {
   transform: scale(0.9);
+}
+main .cards-container .card-item2 .card-img2 {
+  position: absolute;
+  width: 170px;
+  top: -84px;
+  right: 130px;
 }
 main .cards-container .card-item3 {
   position: relative;
@@ -240,8 +247,9 @@ main .cards-container .card-item3 {
 }
 main .cards-container .card-item3 .card-content3 {
   max-width: 200px;
+  z-index: 2;
 }
-main .cards-container .card-item3 .card3-title {
+main .cards-container .card-item3 .card-content3 .card3-title {
   color: #fff;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
@@ -249,14 +257,14 @@ main .cards-container .card-item3 .card3-title {
   font-weight: bold;
   margin-bottom: 5px;
 }
-main .cards-container .card-item3 .card3-description {
+main .cards-container .card-item3 .card-content3 .card3-description {
   color: #fff;
   font-size: clamp(18px, 5vw, 20px);
   font-family: "Open Sans", sans-serif;
   font-weight: 100;
   margin-bottom: 10px;
 }
-main .cards-container .card-item3 .card3-button {
+main .cards-container .card-item3 .card-content3 .card3-button {
   border: none;
   border-radius: 8px;
   padding: 10px 20px;
@@ -268,11 +276,17 @@ main .cards-container .card-item3 .card3-button {
   font-family: "Montserrat", sans-serif;
   cursor: pointer;
 }
-main .cards-container .card-item3 .card3-button:hover {
+main .cards-container .card-item3 .card-content3 .card3-button:hover {
   background-color: #f1f1f1;
 }
-main .cards-container .card-item3 .card3-button:active {
+main .cards-container .card-item3 .card-content3 .card3-button:active {
   transform: scale(0.9);
+}
+main .cards-container .card-item3 .card-img3 {
+  position: absolute;
+  width: 170px;
+  top: -58px;
+  right: -16px;
 }
 main .cards-container .card-item4 {
   position: relative;
@@ -287,9 +301,10 @@ main .cards-container .card-item4 .card-content4 {
   display: flex;
   flex-direction: column;
   align-items: end;
-  max-width: 180px;
+  max-width: 200px;
+  z-index: 2;
 }
-main .cards-container .card-item4 .card4-title {
+main .cards-container .card-item4 .card-content4 .card4-title {
   text-align: end;
   color: #fff;
   text-transform: uppercase;
@@ -298,7 +313,7 @@ main .cards-container .card-item4 .card4-title {
   font-weight: bold;
   margin-bottom: 5px;
 }
-main .cards-container .card-item4 .card4-description {
+main .cards-container .card-item4 .card-content4 .card4-description {
   text-align: end;
   color: #fff;
   font-size: clamp(18px, 5vw, 20px);
@@ -306,7 +321,7 @@ main .cards-container .card-item4 .card4-description {
   font-weight: 100;
   margin-bottom: 10px;
 }
-main .cards-container .card-item4 .card4-button {
+main .cards-container .card-item4 .card-content4 .card4-button {
   border: none;
   border-radius: 8px;
   padding: 10px 20px;
@@ -318,11 +333,17 @@ main .cards-container .card-item4 .card4-button {
   font-family: "Montserrat", sans-serif;
   cursor: pointer;
 }
-main .cards-container .card-item4 .card4-button:hover {
+main .cards-container .card-item4 .card-content4 .card4-button:hover {
   background-color: #f1f1f1;
 }
-main .cards-container .card-item4 .card4-button:active {
+main .cards-container .card-item4 .card-content4 .card4-button:active {
   transform: scale(0.9);
+}
+main .cards-container .card-item4 .card-img4 {
+  position: absolute;
+  width: 150px;
+  top: -29px;
+  right: 147px;
 }
 main .cards-container .card-item5 {
   position: relative;
@@ -334,8 +355,9 @@ main .cards-container .card-item5 {
 }
 main .cards-container .card-item5 .card-content5 {
   max-width: 200px;
+  z-index: 2;
 }
-main .cards-container .card-item5 .card5-title {
+main .cards-container .card-item5 .card-content5 .card5-title {
   color: #fff;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
@@ -343,14 +365,14 @@ main .cards-container .card-item5 .card5-title {
   font-weight: bold;
   margin-bottom: 5px;
 }
-main .cards-container .card-item5 .card5-description {
+main .cards-container .card-item5 .card-content5 .card5-description {
   color: #fff;
   font-size: clamp(18px, 5vw, 20px);
   font-family: "Open Sans", sans-serif;
   font-weight: 100;
   margin-bottom: 10px;
 }
-main .cards-container .card-item5 .card5-button {
+main .cards-container .card-item5 .card-content5 .card5-button {
   border: none;
   border-radius: 8px;
   padding: 10px 20px;
@@ -362,11 +384,17 @@ main .cards-container .card-item5 .card5-button {
   font-family: "Montserrat", sans-serif;
   cursor: pointer;
 }
-main .cards-container .card-item5 .card5-button:hover {
+main .cards-container .card-item5 .card-content5 .card5-button:hover {
   background-color: #f1f1f1;
 }
-main .cards-container .card-item5 .card5-button:active {
+main .cards-container .card-item5 .card-content5 .card5-button:active {
   transform: scale(0.9);
+}
+main .cards-container .card-item5 .card-img5 {
+  position: absolute;
+  width: 170px;
+  top: -58px;
+  right: -16px;
 }
 
 footer {
@@ -436,5 +464,107 @@ footer p {
   main .cards-container .card-item1 .card-img1 {
     width: 180px;
     top: -58px;
+  }
+}
+@media screen and (min-width: 350px) {
+  main .cards-container .card-item2 {
+    max-width: 100%;
+  }
+  main .cards-container .card-item2 .card-img2 {
+    width: 180px;
+    top: -98px;
+    right: 150px;
+  }
+}
+@media screen and (min-width: 370px) {
+  main .cards-container .card-item2 .card-img2 {
+    right: 170px;
+  }
+}
+@media screen and (min-width: 400px) {
+  main .cards-container .card-item2 .card-img2 {
+    width: 190px;
+    top: -107px;
+    right: 185px;
+  }
+}
+@media screen and (min-width: 450px) {
+  main .cards-container .card-item2 .card-img2 {
+    width: 192px;
+    right: 220px;
+    top: -106px;
+  }
+}
+@media screen and (min-width: 430px) {
+  main .cards-container .card-item3 .card-img3 {
+    width: 190px;
+    top: -79px;
+  }
+}
+@media screen and (min-width: 350px) {
+  main .cards-container .card-item4 .card-img4 {
+    right: 170px;
+  }
+}
+@media screen and (min-width: 360px) {
+  main .cards-container .card-item4 .card-img4 {
+    width: 160px;
+    top: -43px;
+    right: 175px;
+  }
+}
+@media screen and (min-width: 375px) {
+  main .cards-container .card-item4 .card-img4 {
+    top: -39px;
+  }
+}
+@media screen and (min-width: 378px) {
+  main .cards-container .card-item4 .card-img4 {
+    width: 158px;
+    right: 191px;
+    top: -36px;
+  }
+}
+@media screen and (min-width: 398px) {
+  main .cards-container .card-item4 .card-img4 {
+    width: 180px;
+    right: 196px;
+    top: -38px;
+  }
+}
+@media screen and (min-width: 436px) {
+  main .cards-container .card-item4 .card-img4 {
+    right: 223px;
+    top: -36px;
+  }
+}
+@media screen and (min-width: 465px) {
+  main .cards-container .card-item4 .card-img4 {
+    right: 235px;
+    top: -48px;
+    width: 190px;
+  }
+}
+@media screen and (min-width: 375px) {
+  main .cards-container .card-item5 .card-img5 {
+    top: -55px;
+    right: -16px;
+  }
+}
+@media screen and (min-width: 385px) {
+  main .cards-container .card-item5 .card-img5 {
+    top: -51px;
+  }
+}
+@media screen and (min-width: 403px) {
+  main .cards-container .card-item5 .card-img5 {
+    top: -50px;
+  }
+}
+@media screen and (min-width: 465px) {
+  main .cards-container .card-item5 .card-img5 {
+    width: 180px;
+    right: -14px;
+    top: -61px;
   }
 }/*# sourceMappingURL=main.css.map */
