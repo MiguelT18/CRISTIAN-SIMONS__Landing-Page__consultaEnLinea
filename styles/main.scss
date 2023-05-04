@@ -154,11 +154,11 @@ header {
         top: -2px;
     }
     .header-welcome {
-        max-width: 640px;
+        max-width: 800px;
         margin: 0 auto;
         text-align: center;
         color: #fff;
-        padding: 5px 16px 20px;
+        padding: 5px 16px 25px;
         font: {
             family: $font-open-sans;
             size: $font-size-small;
@@ -171,36 +171,42 @@ header {
 //? ===================
 main {
     padding: 0 16px;
-    .main-title {
-        color: $dark-blue;
-        letter-spacing: 2px;
-        margin-top: 30px;
-        margin-bottom: 10px;
-        font: {
-            family: $font-montserrat;
-            size: $font-size-medium;
+    .main-header {
+        max-width: 450px;
+        margin: 0 auto;
+        .main-title {
+            color: $dark-blue;
+            letter-spacing: 2px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            font: {
+                family: $font-montserrat;
+                size: $font-size-medium;
+                weight: bold;
+            }
+            text: {
+                transform: uppercase;
+                align: center;
+            }
         }
-        text: {
-            transform: uppercase;
-            align: center;
-        }
-    }
-    .main-description {
-        text-align: center;
-        font: {
-            family: $font-open-sans;
-            size: $font-size-small;
-            weight: 500;
+        .main-description {
+            text-align: center;
+            font: {
+                family: $font-open-sans;
+                size: $font-size-small;
+                weight: 500;
+            }
         }
     }
 
     // CARD STYLES:
     .cards-container {
         max-width: 450px;
-        margin: 30px auto 0;
+        margin: 50px auto 0;
         display: grid;
         gap: 50px;
         .card-item1 {
+            max-width: 280px;
             display: flex;
             position: relative;
             background-image: linear-gradient(to bottom, #296eef, #3761b0);
@@ -209,6 +215,7 @@ main {
 
             .card-content1 {
                 max-width: 200px;
+                z-index: 1;
                 .card1-title {
                     @include cardTitle();
                 }
@@ -224,6 +231,12 @@ main {
                 .card1-button:active {
                     @include cardButtonActive();
                 }
+            }
+            .card-img1 {
+                position: absolute;
+                width: 160px;
+                top: -45px;
+                right: -8px;
             }
         }
         .card-item2 {
@@ -386,6 +399,82 @@ footer {
 //? =================================
 //? MEDIA QUERIES - Responsive design
 //? =================================
+
+//? ================
+//? cards-container
+//? ================
+
+//! card1
+
+@media screen and (min-width: 360px) {
+    main {
+        .cards-container {
+            .card-item1 {
+                max-width: 100%;
+                .card-img1 {
+                    width: 170px;
+                    top: -58px;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 374px) {
+    main {
+        .cards-container {
+            .card-item1 {
+                max-width: 100%;
+                .card-img1 {
+                    width: 170px;
+                    top: -57px;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 400px) {
+    main {
+        .cards-container {
+            .card-item1 {
+                max-width: 100%;
+                .card-img1 {
+                    width: 170px;
+                    top: -50px;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 434px) {
+    main {
+        .cards-container {
+            .card-item1 {
+                max-width: 100%;
+                .card-img1 {
+                    width: 170px;
+                    top: -50px;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 454px) {
+    main {
+        .cards-container {
+            .card-item1 {
+                max-width: 100%;
+                .card-img1 {
+                    width: 180px;
+                    top: -58px;
+                }
+            }
+        }
+    }
+}
+
+// TODO: Completar de subir todas las imágenes a todas las cards y al mismo tiempo tienen que ser responsive
+//! card2
+
 
 // @media screen and (min-width: 440px) {
 //     .cards-container {

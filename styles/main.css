@@ -89,11 +89,11 @@ header .header-divider::after {
   top: -2px;
 }
 header .header-welcome {
-  max-width: 640px;
+  max-width: 800px;
   margin: 0 auto;
   text-align: center;
   color: #fff;
-  padding: 5px 16px 20px;
+  padding: 5px 16px 25px;
   font-family: "Open Sans", sans-serif;
   font-size: clamp(18px, 5vw, 20px);
 }
@@ -101,17 +101,22 @@ header .header-welcome {
 main {
   padding: 0 16px;
 }
-main .main-title {
+main .main-header {
+  max-width: 450px;
+  margin: 0 auto;
+}
+main .main-header .main-title {
   color: #3761b0;
   letter-spacing: 2px;
   margin-top: 30px;
   margin-bottom: 10px;
   font-family: "Montserrat", sans-serif;
   font-size: clamp(20px, 5vw, 24px);
+  font-weight: bold;
   text-transform: uppercase;
   text-align: center;
 }
-main .main-description {
+main .main-header .main-description {
   text-align: center;
   font-family: "Open Sans", sans-serif;
   font-size: clamp(18px, 5vw, 20px);
@@ -119,11 +124,12 @@ main .main-description {
 }
 main .cards-container {
   max-width: 450px;
-  margin: 30px auto 0;
+  margin: 50px auto 0;
   display: grid;
   gap: 50px;
 }
 main .cards-container .card-item1 {
+  max-width: 280px;
   display: flex;
   position: relative;
   background-image: linear-gradient(to bottom, #296eef, #3761b0);
@@ -133,6 +139,7 @@ main .cards-container .card-item1 {
 }
 main .cards-container .card-item1 .card-content1 {
   max-width: 200px;
+  z-index: 1;
 }
 main .cards-container .card-item1 .card-content1 .card1-title {
   color: #fff;
@@ -166,6 +173,12 @@ main .cards-container .card-item1 .card-content1 .card1-button:hover {
 }
 main .cards-container .card-item1 .card-content1 .card1-button:active {
   transform: scale(0.9);
+}
+main .cards-container .card-item1 .card-img1 {
+  position: absolute;
+  width: 160px;
+  top: -45px;
+  right: -8px;
 }
 main .cards-container .card-item2 {
   position: relative;
@@ -378,4 +391,50 @@ footer p {
   color: #fff;
   text-align: center;
   margin-top: -20px;
+}
+
+@media screen and (min-width: 360px) {
+  main .cards-container .card-item1 {
+    max-width: 100%;
+  }
+  main .cards-container .card-item1 .card-img1 {
+    width: 170px;
+    top: -58px;
+  }
+}
+@media screen and (min-width: 374px) {
+  main .cards-container .card-item1 {
+    max-width: 100%;
+  }
+  main .cards-container .card-item1 .card-img1 {
+    width: 170px;
+    top: -57px;
+  }
+}
+@media screen and (min-width: 400px) {
+  main .cards-container .card-item1 {
+    max-width: 100%;
+  }
+  main .cards-container .card-item1 .card-img1 {
+    width: 170px;
+    top: -50px;
+  }
+}
+@media screen and (min-width: 434px) {
+  main .cards-container .card-item1 {
+    max-width: 100%;
+  }
+  main .cards-container .card-item1 .card-img1 {
+    width: 170px;
+    top: -50px;
+  }
+}
+@media screen and (min-width: 454px) {
+  main .cards-container .card-item1 {
+    max-width: 100%;
+  }
+  main .cards-container .card-item1 .card-img1 {
+    width: 180px;
+    top: -58px;
+  }
 }/*# sourceMappingURL=main.css.map */
