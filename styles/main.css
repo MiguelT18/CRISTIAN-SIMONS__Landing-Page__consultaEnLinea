@@ -453,23 +453,133 @@ footer p {
     top: -92px;
   }
 }
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 396px) {
+  .card-img1 {
+    top: -96px !important;
+  }
+  .card-img2 {
+    top: -110px !important;
+  }
+  .card-img3 {
+    top: -89px !important;
+  }
+  .card-img4 {
+    top: -35px !important;
+  }
+  .card-img5 {
+    top: -86px !important;
+  }
+}
+@media screen and (min-width: 362px) {
+  .card-img1 {
+    top: -99px !important;
+  }
+  .card-img2 {
+    top: -139px !important;
+  }
+  .card-img3 {
+    top: -94px !important;
+  }
+  .card-img4 {
+    top: -43px !important;
+  }
+  .card-img5 {
+    top: -91px !important;
+  }
+}
+@media screen and (min-width: 375px) {
+  .card-img1 {
+    top: -98px !important;
+  }
+  .card-img2 {
+    top: -139px !important;
+  }
+  .card-img3 {
+    top: -93px !important;
+  }
+  .card-img4 {
+    top: -39px !important;
+  }
+  .card-img5 {
+    top: -89px !important;
+  }
+}
+@media screen and (min-width: 397px) {
+  .card-img1 {
+    top: -96px !important;
+  }
+  .card-img2 {
+    top: -110px !important;
+  }
+  .card-img3 {
+    top: -89px !important;
+  }
+  .card-img4 {
+    top: -36px !important;
+  }
+  .card-img5 {
+    top: -86px !important;
+  }
+}
+@media screen and (min-width: 398px) {
+  .card-img1 {
+    top: -95px !important;
+  }
+  .card-img2 {
+    width: 200px !important;
+    top: -123px !important;
+  }
+  .card-img3 {
+    top: -88px !important;
+  }
+  .card-img4 {
+    left: -5px !important;
+    top: -34px !important;
+  }
+  .card-img5 {
+    top: -85px !important;
+  }
+}
+@media screen and (min-width: 420px) {
+  .card-img1 {
+    top: -94px !important;
+  }
+  .card-img2 {
+    top: -121px !important;
+  }
+  .card-img3 {
+    top: -86px !important;
+  }
+  .card-img5 {
+    top: -83px !important;
+  }
+}
+@media screen and (min-width: 440px) {
+  .card-img1 {
+    top: -92px !important;
+  }
+  .card-img2 {
+    top: -120px !important;
+  }
+  .card-img4 {
+    top: -32px !important;
+  }
+}
+@media screen and (min-width: 465px) {
   .card-img1 {
     top: -91px !important;
   }
   .card-img2 {
-    width: 200px !important;
     top: -118px !important;
   }
   .card-img3 {
-    top: -85px !important;
+    top: -84px !important;
   }
   .card-img4 {
-    left: -5px !important;
-    top: -31px !important;
+    top: -30px !important;
   }
   .card-img5 {
-    top: -85px !important;
+    top: -81px !important;
   }
 }
 @media screen and (min-width: 480px) {
