@@ -186,12 +186,14 @@ main .cards-container .card-item2 {
   height: 150px;
   position: relative;
   display: flex;
+  flex-direction: row-reverse;
   background-image: linear-gradient(to bottom, #a80606, #6b0000);
   box-shadow: 4px 4px 10px #000;
   padding: 20px;
   border-radius: 8px;
 }
 main .cards-container .card-item2 .card-content2 {
+  text-align: end;
   z-index: 1;
   height: 100%;
   max-width: 260px;
@@ -234,7 +236,7 @@ main .cards-container .card-item2 .card-content2 .card2-button:active {
   transform: scale(0.9);
 }
 main .cards-container .card-item2 .card-img2 {
-  transform: scaleX(-1);
+  left: 0;
 }
 main .cards-container .card-item3 {
   height: 150px;
@@ -291,12 +293,14 @@ main .cards-container .card-item4 {
   height: 150px;
   position: relative;
   display: flex;
+  flex-direction: row-reverse;
   background-image: linear-gradient(to bottom, #711cbe, #c42b66, #e19449);
   box-shadow: 4px 4px 10px #000;
   padding: 20px;
   border-radius: 8px;
 }
 main .cards-container .card-item4 .card-content4 {
+  text-align: end;
   z-index: 1;
   height: 100%;
   max-width: 266px;
@@ -337,6 +341,9 @@ main .cards-container .card-item4 .card-content4 .card4-button:hover {
 }
 main .cards-container .card-item4 .card-content4 .card4-button:active {
   transform: scale(0.9);
+}
+main .cards-container .card-item4 .card-img4 {
+  left: 0;
 }
 main .cards-container .card-item5 {
   height: 150px;
@@ -414,6 +421,11 @@ footer p {
   margin-top: -20px;
 }
 
+@media screen and (max-width: 440px) {
+  .card-img {
+    filter: brightness(0.8);
+  }
+}
 @media screen and (min-width: 1080px) {
   main .main-header {
     padding-bottom: 10px;
