@@ -446,6 +446,7 @@ footer {
         .cards-container {
             max-width: 1000px;
             grid-template-columns: repeat(2, 1fr);
+            gap: 100px !important;
             .card-item5 {
                 width: 450px;
                 margin: 0 auto;
